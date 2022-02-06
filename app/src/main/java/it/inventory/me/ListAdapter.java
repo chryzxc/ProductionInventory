@@ -25,7 +25,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,9 +44,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
 
 
-
     }
-
 
 
     @Override
@@ -57,19 +54,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-
         private TextView computerName;
-
-
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             computerName = (TextView) itemView.findViewById(R.id.computerName);
-
-
-
-
 
 
 
