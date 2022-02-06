@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_200">#DDE9FF</color>
+    <color name="base_500">#3783FB</color>
+    <color name="base_700">#072453</color>
+    <color name="base_900">#FCAE05</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dirtyWhite">#F9F9FB</color>
+    <color name="navButtonBackground">#F0F5FF</color>
+    <color name="textColor">#C5E9F9</color>
+
+
+</resources>
