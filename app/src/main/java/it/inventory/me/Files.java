@@ -26,10 +26,10 @@ public class Files {
             public void onEvent(@Nullable QuerySnapshot snapshots, @Nullable FirebaseFirestoreException error) {
                 if (!snapshots.isEmpty()){
 
-                    FileClass.file_myLists.clear();
-                    FileClass.file_adapter = new FileAdapter(FileClass.file_myLists, context);
-                    FileClass.file_rv.setAdapter(FileClass.file_adapter);
-                    FileClass.file_adapter.notifyDataSetChanged();
+                    File.file_myLists.clear();
+                    File.file_adapter = new FileAdapter(File.file_myLists, context);
+                    File.file_rv.setAdapter(File.file_adapter);
+                    File.file_adapter.notifyDataSetChanged();
 
 
                     if (error != null) {
@@ -40,16 +40,16 @@ public class Files {
                     for (DocumentSnapshot document : snapshots.getDocuments()) {
 
                         if (document.exists()){
-                            FileClass.file_myLists.add(new FileList(document.getId(),document.getString("file_name"),null,null));
+                            File.file_myLists.add(new FileList(document.getId(),document.getString("file_name"),document.getDate("date_created"),document.getDate("last_updated"),document.getString("password")));
 
                         }
 
 
                     }
 
-                    FileClass.file_adapter = new FileAdapter(FileClass.file_myLists, context);
-                    FileClass.file_rv.setAdapter(FileClass.file_adapter);
-                    FileClass.file_adapter.notifyDataSetChanged();
+                    File.file_adapter = new FileAdapter(File.file_myLists, context);
+                    File.file_rv.setAdapter(File.file_adapter);
+                    File.file_adapter.notifyDataSetChanged();
 
                 }
 

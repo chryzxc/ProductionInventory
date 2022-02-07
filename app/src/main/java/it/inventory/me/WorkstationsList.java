@@ -2,12 +2,12 @@ package it.inventory.me;
 
 import java.util.Date;
 
-public class ListList {
+public class WorkstationsList {
 
     private int computerName;
 
 
-    public ListList(int computerName) {
+    public WorkstationsList(int computerName) {
         this.computerName = computerName;
 
 

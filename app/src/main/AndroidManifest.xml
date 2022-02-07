@@ -18,10 +18,10 @@
             android:name=".Specification"
             android:exported="false" />
         <activity
-            android:name=".ListClass"
+            android:name=".Workstation"
             android:exported="false" />
         <activity
-            android:name=".FileClass"
+            android:name=".File"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

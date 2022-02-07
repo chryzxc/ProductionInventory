@@ -4,16 +4,17 @@ import java.util.Date;
 
 public class FileList {
 
-    private String id,fileName;
+    private String id,fileName,password;
     private Date dateCreated,lastUpdated;
 
 
 
-    public FileList(String id, String fileName, Date dateCreated, Date lastUpdated) {
+    public FileList(String id, String fileName, Date dateCreated, Date lastUpdated, String password) {
         this.id = id;
         this.fileName = fileName;
         this.dateCreated = dateCreated;
         this.lastUpdated = lastUpdated;
+        this.password = password;
 
 
     }
@@ -42,6 +43,9 @@ public class FileList {
 
     }
 
+    public String getPassword() {
+        return password;
+    }
 
 
 

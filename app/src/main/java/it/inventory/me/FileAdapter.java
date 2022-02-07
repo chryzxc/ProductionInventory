@@ -1,6 +1,5 @@
 package it.inventory.me;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -46,7 +45,7 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ct, ListClass.class);
+                Intent intent = new Intent(ct, Workstation.class);
                 intent.putExtra("fileId", myList.getId());
                 view.getContext().startActivity(intent);
 

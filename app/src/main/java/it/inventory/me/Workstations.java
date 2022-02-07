@@ -11,9 +11,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.core.OrderBy;
 
-public class Lists {
+public class Workstations {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -27,10 +26,10 @@ public class Lists {
             public void onEvent(@Nullable QuerySnapshot snapshots, @Nullable FirebaseFirestoreException error) {
                 if (!snapshots.isEmpty()){
 
-                    ListClass.list_myLists.clear();
-                    ListClass.list_adapter = new ListAdapter(ListClass.list_myLists, context);
-                    ListClass.list_rv.setAdapter(ListClass.list_adapter);
-                    ListClass.list_adapter.notifyDataSetChanged();
+                    Workstation.workstations_myLists.clear();
+                    Workstation.workstations_adapter = new WorkstationsAdapter(Workstation.workstations_myLists, context);
+                    Workstation.workstations_rv.setAdapter(Workstation.workstations_adapter);
+                    Workstation.workstations_adapter.notifyDataSetChanged();
 
 
                     if (error != null) {
@@ -41,16 +40,16 @@ public class Lists {
                     for (DocumentSnapshot document : snapshots.getDocuments()) {
 
                         if (document.exists()){
-                            ListClass.list_myLists.add(new ListList(document.getLong("computer_name").intValue()));
+                            Workstation.workstations_myLists.add(new WorkstationsList(document.getLong("computer_name").intValue()));
 
                         }
 
 
                     }
 
-                    ListClass.list_adapter = new ListAdapter(ListClass.list_myLists, context);
-                    ListClass.list_rv.setAdapter(ListClass.list_adapter);
-                    ListClass.list_adapter.notifyDataSetChanged();
+                    Workstation.workstations_adapter = new WorkstationsAdapter(Workstation.workstations_myLists, context);
+                    Workstation.workstations_rv.setAdapter(Workstation.workstations_adapter);
+                    Workstation.workstations_adapter.notifyDataSetChanged();
 
                 }
 

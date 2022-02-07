@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,11 +14,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-    private List<ListList> myListList;
+public class WorkstationsAdapter extends RecyclerView.Adapter<WorkstationsAdapter.ViewHolder> {
+    private List<WorkstationsList> myListList;
     private Context ct;
 
-    public ListAdapter(List<ListList> myListList, Context ct) {
+    public WorkstationsAdapter(List<WorkstationsList> myListList, Context ct) {
         this.myListList = myListList;
         this.ct = ct;
     }
@@ -36,7 +35,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ListList myList=myListList.get(position);
+        WorkstationsList myList=myListList.get(position);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         holder.computerName.setText(String.valueOf(myList.getComputerName()));
@@ -44,6 +43,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ct, Specification.class);
+                intent.putExtra("workstationNumber",myList.getComputerName());
                 view.getContext().startActivity(intent);
             }
         });

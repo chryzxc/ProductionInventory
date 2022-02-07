@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListClass">
+    tools:context=".Workstation">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="15dp"
                 android:gravity="center"
-                android:text="List"
+                android:text="Workstations"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold"
