@@ -47,16 +47,6 @@
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="top"
-                android:text="Created by: Christian Villablanca"
-                android:textColor="@color/base_700" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

@@ -9,7 +9,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.core.OrderBy;
 
 public class Lists {
 
@@ -20,7 +22,7 @@ public class Lists {
 
 
 
-        db.collection("Files").document(fileId).collection("list").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        db.collection("Files").document(fileId).collection("list").orderBy("computer_name", Query.Direction.ASCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot snapshots, @Nullable FirebaseFirestoreException error) {
                 if (!snapshots.isEmpty()){
@@ -39,7 +41,7 @@ public class Lists {
                     for (DocumentSnapshot document : snapshots.getDocuments()) {
 
                         if (document.exists()){
-                            ListClass.list_myLists.add(new ListList(document.getId()));
+                            ListClass.list_myLists.add(new ListList(document.getLong("computer_name").intValue()));
 
                         }
 

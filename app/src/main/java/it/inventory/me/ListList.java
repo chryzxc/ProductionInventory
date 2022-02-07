@@ -4,17 +4,17 @@ import java.util.Date;
 
 public class ListList {
 
-    private String computerName;
+    private int computerName;
 
 
-    public ListList(String id) {
-        this.computerName = id;
+    public ListList(int computerName) {
+        this.computerName = computerName;
 
 
 
     }
 
-    public String getComputerName() {
+    public int getComputerName() {
 
         return computerName;
     }

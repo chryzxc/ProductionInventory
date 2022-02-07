@@ -39,7 +39,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         ListList myList=myListList.get(position);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        holder.computerName.setText(myList.getComputerName());
+        holder.computerName.setText(String.valueOf(myList.getComputerName()));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ct, Specification.class);
+                view.getContext().startActivity(intent);
+            }
+        });
 
 
 

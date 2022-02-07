@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_previous"
+        android:checkable="false"
+        android:checked="false"
+        android:icon="@drawable/previous"
+        android:title="Previous" />
+    <item
+        android:id="@+id/navigation_scan"
+        android:checkable="false"
+        android:checked="false"
+        android:icon="@drawable/barcode"
+        android:title="Scan" />
+    <item
+        android:id="@+id/navigation_next"
+        android:checkable="false"
+        android:checked="false"
+        android:icon="@drawable/next"
+        android:title="Next" />
+</menu>

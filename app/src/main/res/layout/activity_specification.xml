@@ -7,11 +7,12 @@
     tools:context=".Specification">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:background="@color/base_700"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,7 +26,7 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="24dp"
                 android:gravity="center"
@@ -34,6 +35,7 @@
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,8 +49,21 @@
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/scanButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="24dp"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/barcode" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/card_top"
+            android:backgroundTint="@color/dirtyWhite"
             android:orientation="vertical">
 
             <androidx.core.widget.NestedScrollView
@@ -105,6 +121,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -116,7 +133,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/moBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -160,7 +177,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/moSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -220,6 +237,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -231,7 +249,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/ppBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -275,7 +293,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/ppSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -335,6 +353,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -346,7 +365,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/mmBarcode1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -390,7 +409,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/mmSpecs1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -428,6 +447,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -439,7 +459,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/mmBarcode2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -483,7 +503,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/mmSpecs2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -543,6 +563,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -554,7 +575,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/lpBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -598,7 +619,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/lpSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -657,6 +678,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -668,7 +690,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/dmBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -712,7 +734,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/dmSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -771,6 +793,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -782,7 +805,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/hdBarcode1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -826,7 +849,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/hdSpecs1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -864,6 +887,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -875,7 +899,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/hdBarcode2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -919,7 +943,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/hdSpecs2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -978,6 +1002,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -989,7 +1014,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/pwBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1033,7 +1058,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/pwSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1092,6 +1117,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -1103,7 +1129,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/ccBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1147,7 +1173,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/ccSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1206,6 +1232,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -1217,7 +1244,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/omBarcode1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1261,7 +1288,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/omSpecs1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1299,6 +1326,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -1310,7 +1338,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/omBarcode2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1354,7 +1382,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/omSpecs2"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1413,6 +1441,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -1424,7 +1453,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/kbBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1468,7 +1497,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/kbSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1527,6 +1556,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -1538,7 +1568,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/msBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1582,7 +1612,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/msSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1641,6 +1671,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -1652,7 +1683,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/wcBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1696,7 +1727,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/wcSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1726,6 +1757,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -1742,6 +1774,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
 
@@ -1756,6 +1789,7 @@
                                     android:layout_marginLeft="15dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="15dp"
+                                    android:layout_marginBottom="5dp"
                                     android:layout_weight="1"
                                     android:clickable="false"
                                     app:cardBackgroundColor="@color/dirtyWhite"
@@ -1767,7 +1801,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName2"
+                                        android:id="@+id/hsBarcode"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1811,7 +1845,7 @@
                                     app:layout_constraintTop_toTopOf="parent">
 
                                     <EditText
-                                        android:id="@+id/editTextTextPersonName"
+                                        android:id="@+id/hsSpecs"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
@@ -1832,10 +1866,6 @@
                             </LinearLayout>
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.5dp"
-                            android:background="@android:color/darker_gray" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -1844,4 +1874,17 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="10dp"
+        app:elevation="10dp"
+        app:labelVisibilityMode="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
