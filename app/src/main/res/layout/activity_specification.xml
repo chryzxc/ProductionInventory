@@ -40,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/computerNameSpec"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -55,15 +55,15 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
-                android:id="@+id/scanButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/saveButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginEnd="24dp"
                 android:tint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/barcode" />
+                app:srcCompat="@drawable/ic_baseline_save_24" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -137,18 +137,20 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
+                                        android:capitalize="characters"
                                         android:ems="10"
                                         android:hint="Barcode"
-                                        android:inputType="textPersonName"
-                                        android:padding="10dp" />
+                                        android:inputType="textCapSentences|textCapWords|textCapCharacters"
+                                        android:padding="10dp"
+                                        android:textAllCaps="true" />
                                 </androidx.cardview.widget.CardView>
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -189,12 +191,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:gravity="center" />
+                                    android:layout_weight="7"
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -261,10 +264,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -305,11 +308,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -377,10 +380,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -421,11 +424,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -471,10 +474,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -515,11 +518,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -587,10 +590,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -631,11 +634,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -702,10 +705,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -746,11 +749,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -817,10 +820,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -861,11 +864,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -911,10 +914,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -955,11 +958,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1026,10 +1029,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1070,11 +1073,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1141,10 +1144,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1185,11 +1188,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1256,10 +1259,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1300,11 +1303,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1350,10 +1353,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1394,11 +1397,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1465,10 +1468,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1509,11 +1512,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1580,10 +1583,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1624,11 +1627,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1695,10 +1698,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1739,11 +1742,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>
@@ -1813,10 +1816,10 @@
 
                                 <ImageView
                                     android:id="@+id/imageView"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:visibility="invisible"
                                     app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
@@ -1857,11 +1860,11 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/spinner"
-                                    android:layout_width="wrap_content"
+                                    android:id="@+id/moSpinner"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:layout_weight="1"
+                                    android:layout_weight="7"
                                     android:gravity="center" />
                             </LinearLayout>
                         </LinearLayout>

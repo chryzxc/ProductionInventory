@@ -43,6 +43,7 @@ public class WorkstationsAdapter extends RecyclerView.Adapter<WorkstationsAdapte
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ct, Specification.class);
+                intent.putExtra("id",myList.getId());
                 intent.putExtra("workstationNumber",myList.getComputerName());
                 view.getContext().startActivity(intent);
             }

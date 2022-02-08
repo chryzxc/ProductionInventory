@@ -3,27 +3,40 @@ package it.inventory.me;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Specification extends AppCompatActivity {
 
     FirebaseFirestore db;
+    private static Activity activity;
 
     EditText moBarcode;
     EditText moSpecs;
@@ -77,6 +90,11 @@ public class Specification extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_specification);
         db = FirebaseFirestore.getInstance();
+        activity = Specification.this;
+
+        TextView computerNameSpec = findViewById(R.id.computerNameSpec);
+        computerNameSpec.setText(String.valueOf(getIntent().getIntExtra("workstationNumber", 0000)));
+
         moBarcode = findViewById(R.id.moBarcode);
         moSpecs = findViewById(R.id.moSpecs);
 
@@ -124,11 +142,12 @@ public class Specification extends AppCompatActivity {
         hsSpecs = findViewById(R.id.hsSpecs);
 
 
-        ImageView scanButton = (ImageView) findViewById(R.id.scanButton);
-        scanButton.setOnClickListener(new View.OnClickListener() {
+        ImageView saveButton = (ImageView) findViewById(R.id.saveButton);
+        saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //loadSpecs();
+                 instantSave();
 
             }
         });
@@ -161,7 +180,7 @@ public class Specification extends AppCompatActivity {
         View parentLayout = findViewById(android.R.id.content);
 
         Map<String, Object> data = new HashMap<>();
-        data.put("computer_name", getIntent().getStringExtra("workstationNumber"));
+        data.put("computer_name", getIntent().getIntExtra("workstationNumber", 0000));
         data.put("last_updated", new Date());
 
         data.put("motherboard_barcode", moBarcode.getText().toString());
@@ -210,11 +229,12 @@ public class Specification extends AppCompatActivity {
         data.put("headset_specs", hsBarcode.getText().toString());
 
 
-        db.collection("Files").document("LA")
+        db.collection("Files").document(Workstation.fileId).collection("list").document(getIntent().getStringExtra("id"))
                 .set(data)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
+                        hideKeyboard();
                         Snackbar.make(parentLayout, "Updated", Snackbar.LENGTH_SHORT)
                                 .show();
                     }
@@ -222,11 +242,77 @@ public class Specification extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Snackbar.make(parentLayout, e.getMessage(), Snackbar.LENGTH_SHORT)
+                        hideKeyboard();
+                        Snackbar.make(parentLayout, e.getMessage(), Snackbar.LENGTH_LONG)
                                 .show();
                     }
                 });
 
+    }
+
+    public void loadData() {
+
+    }
+
+    public void loadSpecs() {
+
+
+        db.collection("Specs")
+                .document("Motherboard").get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        DocumentSnapshot document = task.getResult();
+                        List<String> motherboardList = (List<String>) document.get("specs");
+                        Spinner s = (Spinner) findViewById(R.id.moSpinner);
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(Specification.this,
+                                android.R.layout.simple_spinner_item, motherboardList);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        s.setAdapter(adapter);
+
+                        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                String selectedItem = parent.getItemAtPosition(position).toString();
+
+                                moSpecs.setText(selectedItem);
+
+                            }
+
+                            public void onNothingSelected(AdapterView<?> parent) {
+
+                            }
+                        });
+
+
+                    }
+                });
+
+        moSpecs.setText("");
+        ppSpecs.setText("");
+        mmSpecs1.setText("");
+        mmSpecs2.setText("");
+        lpSpecs.setText("");
+        dmSpecs.setText("");
+        hdSpecs1.setText("");
+        hdSpecs2.setText("");
+        pwSpecs.setText("");
+        ccSpecs.setText("");
+        omSpecs1.setText("");
+        omSpecs2.setText("");
+        kbSpecs.setText("");
+        msSpecs.setText("");
+        wcSpecs.setText("");
+        hsSpecs.setText("");
+
+    }
+
+    public static void hideKeyboard() {
+        activity.getCurrentFocus();
+        View view = activity.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     @Override

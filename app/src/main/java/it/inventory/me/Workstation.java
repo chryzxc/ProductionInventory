@@ -15,10 +15,14 @@ public class Workstation extends AppCompatActivity {
     static RecyclerView  workstations_rv;
     static WorkstationsAdapter  workstations_adapter;
 
+    static String fileId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
+        fileId = getIntent().getStringExtra("fileId");
 
 
 
