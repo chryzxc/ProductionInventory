@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_previous"
+        android:id="@+id/navigation_delete"
         android:checkable="false"
         android:checked="false"
-        android:icon="@drawable/previous"
-        android:title="Previous" />
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="Delete"
+        android:visible="true" />
     <item
         android:id="@+id/navigation_scan"
         android:checkable="false"
@@ -13,9 +14,10 @@
         android:icon="@drawable/barcode"
         android:title="Scan" />
     <item
-        android:id="@+id/navigation_next"
+        android:id="@+id/navigation_save"
         android:checkable="false"
         android:checked="false"
-        android:icon="@drawable/next"
-        android:title="Next" />
+        android:icon="@drawable/ic_baseline_save_24"
+        android:title="Save"
+        android:visible="true" />
 </menu>

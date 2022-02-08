@@ -10,11 +10,14 @@
         <entry key="..\:/AndroidStudio/ProductionInventory/app/src/main/res/layout/activity_specification.xml" value="0.264" />
         <entry key="..\:/AndroidStudio/ProductionInventory/app/src/main/res/layout/file_rec.xml" value="0.264" />
         <entry key="..\:/AndroidStudio/ProductionInventory/app/src/main/res/layout/list_rec.xml" value="0.264" />
-        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/activity_file.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/activity_file.xml" value="0.18" />
         <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/activity_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/activity_specification.xml" value="0.25" />
-        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/list_rec.xml" value="0.22" />
+        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/activity_specification.xml" value="0.22" />
+        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/add_file.xml" value="0.2" />
+        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/add_terminal.xml" value="0.22" />
+        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/file_rec.xml" value="0.5" />
+        <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/layout/list_rec.xml" value="0.33" />
         <entry key="..\:/Users/Christian/StudioProjects/ProductionInventory/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
       </map>
     </option>

@@ -7,7 +7,7 @@
     tools:context=".Specification">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/backLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/base_700"
@@ -137,10 +137,9 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
-                                        android:capitalize="characters"
                                         android:ems="10"
                                         android:hint="Barcode"
-                                        android:inputType="textCapSentences|textCapWords|textCapCharacters"
+                                        android:inputType="textPersonName"
                                         android:padding="10dp"
                                         android:textAllCaps="true" />
                                 </androidx.cardview.widget.CardView>
@@ -193,11 +192,11 @@
                                 <Spinner
                                     android:id="@+id/moSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
                                     android:gravity="center"
-                                    android:spinnerMode="dialog" />
+                                    android:spinnerMode="dropdown" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -308,12 +307,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/ppSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -424,12 +424,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/mmSpinner1"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -518,12 +519,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/mmSpinner2"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -634,12 +636,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/lpSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -749,12 +752,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/dmSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -864,12 +868,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/hdSpinner1"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -958,12 +963,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/hdSpinner2"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1073,12 +1079,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/pwSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1188,12 +1195,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/ccSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1303,12 +1311,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/omSpinner1"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1397,12 +1406,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/omSpinner2"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1512,12 +1522,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/kbSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1627,12 +1638,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/msSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1742,12 +1754,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/wcSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1860,12 +1873,13 @@
                                 </androidx.cardview.widget.CardView>
 
                                 <Spinner
-                                    android:id="@+id/moSpinner"
+                                    android:id="@+id/hsSpinner"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="7"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:spinnerMode="dialog" />
                             </LinearLayout>
                         </LinearLayout>
 

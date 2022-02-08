@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/dirtyWhite"
     tools:context=".File">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/fabAddFile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:clickable="true"
-        android:visibility="gone"
-        app:backgroundTint="@color/base_500"
+        android:visibility="visible"
+        app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/btn_star" />
+        app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -38,10 +39,10 @@
                 android:id="@+id/textSecret"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="bottom|center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:gravity="bottom"
+                android:gravity="bottom|center"
                 android:text="Inventory"
                 android:textColor="@color/base_700"
                 android:textSize="40sp"

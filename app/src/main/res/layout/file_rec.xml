@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:clickable="false"
-        app:cardBackgroundColor="@color/dirtyWhite"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="15dp"
         app:cardElevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"

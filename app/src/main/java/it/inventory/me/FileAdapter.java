@@ -2,6 +2,7 @@ package it.inventory.me;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Date;
 import java.util.List;
 
 public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
@@ -41,6 +43,9 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         holder.fileName.setText(myList.getFileName());
+
+        holder.dateCreated.setText("Date created : "+DateFormat.format("hh:mm aa  •  MMM dd yyyy",new Date(String.valueOf(myList.getDateCreated()))));
+        holder.lastUpdated.setText("Last updated : "+DateFormat.format("hh:mm aa  •  MMM dd yyyy",new Date(String.valueOf(myList.getLastUpdated()))));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

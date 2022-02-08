@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +21,14 @@ public class Workstation extends AppCompatActivity {
     static WorkstationsAdapter  workstations_adapter;
 
     static String fileId;
-
+    static androidx.appcompat.app.AlertDialog addTerminal;
+    static View myLayout;
+    LayoutInflater inflater;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        inflater = getLayoutInflater();
 
         fileId = getIntent().getStringExtra("fileId");
 
@@ -36,4 +44,24 @@ public class Workstation extends AppCompatActivity {
 
 
     }
+
+    public void addTerminal(){
+
+        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(Workstation.this);
+        myLayout = inflater.inflate(R.layout.add_terminal, null);
+
+
+
+
+        builder.setView(myLayout);
+        addTerminal = builder.create();
+
+        addTerminal.setCancelable(true);
+        addTerminal.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        addTerminal.show();
+
+    }
+
+
+
 }

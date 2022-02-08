@@ -40,7 +40,7 @@ public class Workstations {
                     for (DocumentSnapshot document : snapshots.getDocuments()) {
 
                         if (document.exists()){
-                            Workstation.workstations_myLists.add(new WorkstationsList(document.getId(),document.getLong("computer_name").intValue()));
+                            Workstation.workstations_myLists.add(new WorkstationsList(document.getId(),document.getLong("computer_name").intValue(),document.getDate("last_updated")));
 
                         }
 

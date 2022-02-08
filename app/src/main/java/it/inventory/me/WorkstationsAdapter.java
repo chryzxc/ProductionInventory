@@ -2,6 +2,7 @@ package it.inventory.me;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Date;
 import java.util.List;
 
 public class WorkstationsAdapter extends RecyclerView.Adapter<WorkstationsAdapter.ViewHolder> {
@@ -39,6 +41,7 @@ public class WorkstationsAdapter extends RecyclerView.Adapter<WorkstationsAdapte
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         holder.computerName.setText(String.valueOf(myList.getComputerName()));
+        holder.lastUpdatedComputer.setText("Last updated: "+DateFormat.format("hh:mm aa  •  MMM dd yyyy",new Date(String.valueOf(myList.getLastUpdated()))));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,12 +65,13 @@ public class WorkstationsAdapter extends RecyclerView.Adapter<WorkstationsAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView computerName;
+        private TextView computerName,lastUpdatedComputer;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             computerName = (TextView) itemView.findViewById(R.id.computerName);
+            lastUpdatedComputer = (TextView) itemView.findViewById(R.id.lastUpdatedComputer);
 
 
 
