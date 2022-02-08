@@ -7,7 +7,6 @@
     tools:context=".Specification">
 
     <LinearLayout
-        android:id="@+id/backLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/base_700"
@@ -80,6 +79,7 @@
                 android:fillViewport="true">
 
                 <LinearLayout
+                    android:id="@+id/backLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
